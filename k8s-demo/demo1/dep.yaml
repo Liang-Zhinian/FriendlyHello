@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: friendly-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: friendly-hello
+  template:
+    metadata:
+      labels:
+        app: friendly-hello
+    spec:
+      containers:
+      - name: friendly-hello
+        imagePullPolicy: IfNotPresent
+        image: registry.cn-hangzhou.aliyuncs.com/liangzhinian/friendly_hello:1.0.6 #katacoda/docker-http-server:latest
+        ports:
+        - containerPort: 80
