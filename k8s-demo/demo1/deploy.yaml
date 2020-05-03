@@ -15,6 +15,6 @@ spec:
       containers:
       - name: friendly-hello
         imagePullPolicy: IfNotPresent
-        image: registry.cn-hangzhou.aliyuncs.com/liangzhinian/friendly_hello:1.0.6 #katacoda/docker-http-server:latest
+        image: registry.cn-hangzhou.aliyuncs.com/liangzhinian/friendly-hello:latest #katacoda/docker-http-server:latest
         ports:
         - containerPort: 80

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: friendly-hello-k8s-svc
+  name: friendly-hello-svc
   labels:
-    app: friendly-hello-k8s
+    app: friendly-hello
 spec:
   type: NodePort
   ports:
-  - port: 8080
+  - port: 80
     nodePort: 30080
   selector:
-    app: friendly-hello-k8s
+    app: friendly-hello
